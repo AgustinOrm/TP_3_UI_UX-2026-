@@ -1,0 +1,16 @@
+.galeria {
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.producto {
+    border: 1px solid red;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    flex-basis: 150px;
+    flex-grow: 0;
+}
