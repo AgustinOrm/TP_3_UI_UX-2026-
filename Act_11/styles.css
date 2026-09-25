@@ -1,0 +1,16 @@
+.lista li.pasar:hover {
+    color: red;
+}
+
+.lista li.mantener:active {
+    color: green;
+}
+
+.lista li:nth-child(even) {
+  background-color: lightblue;
+}
+
+
+.lista li::after {
+    content: "\00A9";
+}
