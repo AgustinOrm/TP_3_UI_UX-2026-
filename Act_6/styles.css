@@ -1,0 +1,28 @@
+#parrafo_id {
+    color: blue;
+}
+
+.cartel01 {
+    font-size: 24px;
+    border: 10px ridge blue;
+}
+
+.parrafo01 span {
+    color: red;
+}
+
+.cartel02 {
+    font-size: 24px;
+    border: 10px ridge red;
+    background-color: yellow;
+}
+
+.cartel02 p {
+    color: orangered;
+    text-align: center;
+}
+
+.cartel02 span {
+    color: blue;
+    text-align: center;
+}
