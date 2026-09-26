@@ -37,3 +37,10 @@ El formulario multi-step se resolvió con el truco de radio buttons ocultos (en 
 La validación visual se implementó únicamente con las pseudo-clases nativas :required, :invalid y :valid, mostrando bordes rojos o verdes según el estado del campo. Por lo tanto, los campos obligatorios aparecen en rojo antes de ser completados, ya que :invalid se activa apenas el campo está vacío.
 
 
+Ejercicio 20:
+Se combinó Flexbox (navbar y carrusel de testimonios) con CSS Grid (sección de servicios) sobre una estructura HTML semántica (header, main, section, footer). 
+Se usaron variables CSS en :root para colores, espaciados y transiciones, reutilizadas en toda la hoja de estilos. 
+La navbar es fija (position: fixed) y se activó scroll-behavior: smooth para la navegación entre secciones mediante anclas. 
+La sección hero incorpora una imagen de fondo y una animación de aparición con @keyframes (fade-in + slide-up) al cargar. 
+Los testimonios se maquetaron como un carrusel simple con overflow-x: auto y scroll-snap-type: x mandatory. 
+Se definieron dos breakpoints (768px y 480px) con enfoque desktop-first, ajustando la navbar a columna, el grid de servicios a una sola columna y el ancho de las tarjetas de testimonios, evitando overflow horizontal en cualquier tamaño de pantalla. 
