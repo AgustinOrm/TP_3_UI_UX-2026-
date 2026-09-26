@@ -1,3 +1,4 @@
+/* redondear los inputs y darle transisión 2s a los efectos */
 .entrada {
     border-radius: 30px;
     
@@ -7,23 +8,18 @@
 }
 
 
-
+/* se aplican los estados, y que efectos darles */
 #name:focus {
     background-color: lightblue;
 }
-
-
 
 #email:focus {
     background-color: lightpink;
 }
 
-
 #message:focus {
     background-color: lightgreen; 
 }
-
-
 
 #submit:focus {
     background-color: red;
