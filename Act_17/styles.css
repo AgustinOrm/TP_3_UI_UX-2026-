@@ -1,0 +1,112 @@
+/* variables definidas */
+:root {
+  --color-primario: #2c3e50;
+  --color-secundario: #3498db;
+  --color-fondo: #f4f6f8;
+  --espaciado: 16px;
+}
+
+/* Base y estilos */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-primario);
+  margin: 0;
+}
+
+main {
+  padding: var(--espaciado);
+}
+
+/* Barra de navegación (Flexbox) */
+.barra-navegacion {
+  position: relative; /* Contexto para el menú desplegable */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-primario);
+  padding: var(--espaciado);
+  box-sizing: border-box;
+}
+
+.logo {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Checkbox oculto */
+.menu-toggle {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Ícono de despliegue */
+.icono-despliegue {
+  display: none; /* Solo se muestra en pantallas chicas (ver media query) */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.icono-despliegue span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 2px;
+}
+
+/* Menú de navegación. */
+.menu ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--espaciado);
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: var(--color-secundario);
+}
+
+/* Comportamiento del menú despliegue que solo se activa en pantallas menores a 768px */
+@media (max-width: 768px) {
+
+  .icono-despliegue {
+    display: flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-primario);
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    padding: var(--espaciado);
+    box-sizing: border-box;
+  }
+
+  /* Selector de hermano general (~): cuando el checkbox está
+     marcado, se despliega el <nav class="menu"> que le sigue */
+  .menu-toggle:checked ~ .menu {
+    max-height: 300px;
+  }
+}
