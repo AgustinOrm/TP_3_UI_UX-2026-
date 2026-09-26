@@ -1,0 +1,80 @@
+/* variables definidas */
+:root {
+  --color-primario: #2c3e50;
+  --color-secundario: #3498db;
+  --color-fondo: #f4f6f8;
+  --espaciado: 16px;
+}
+
+/* Base y estilos */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-primario);
+  margin: 0;
+  padding: var(--espaciado);
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+/* Flexbox Se usa para centrar el contenido de cada bloque */
+.contenedor-spinner,
+.contenedor-tarjeta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+}
+
+/* Spinner de carga animado con rotación 360 */
+.spinner {
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  border: 6px solid #ddd;
+  border-top: 6px solid var(--color-secundario);
+  border-radius: 50%;
+
+  animation-name: girar;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Tarjeta con fade-in + slide-up animada */
+.tarjeta {
+  box-sizing: border-box;
+  width: 300px;
+  padding: var(--espaciado);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #ffffff;
+  text-align: center;
+
+  animation-name: aparecer;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: 1;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
