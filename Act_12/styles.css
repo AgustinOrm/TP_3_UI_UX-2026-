@@ -1,3 +1,4 @@
+/* Base */
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #222222;
@@ -17,15 +18,12 @@ body {
     height: 100px;
 }
 
-
-
+/* creación del tooltip */
 .tooltip {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted black;
 }
-
-
 
 .tooltiptext {
     visibility: hidden;
@@ -41,13 +39,11 @@ body {
     right: 5%;
 }
 
-
-
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
 
-
+/* boton volver */
 .volver {
     position: fixed;
     bottom: 20px;
