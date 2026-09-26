@@ -1,0 +1,38 @@
+.entrada {
+    border-radius: 30px;
+    
+    transition:
+        background-color 2s,
+        color 2s;
+}
+
+
+
+#name:focus {
+    background-color: lightblue;
+}
+
+
+
+#email:focus {
+    background-color: lightpink;
+}
+
+
+#message:focus {
+    background-color: lightgreen; 
+}
+
+
+
+#submit:focus {
+    background-color: red;
+}
+
+#submit:active {
+    background-color: blue;
+}
+
+#submit:hover {
+    color: darkorange;
+}
