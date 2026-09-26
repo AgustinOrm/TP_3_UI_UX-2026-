@@ -3,7 +3,7 @@
 Se completaron todas las actividades 1-20.
 
 (Para las act. 1-4, no se decidió comentar, por el hecho de simplemente funcionar con html y tener objetivos sencillos)
-(De la 5 hasta la 14, solamente se comento el código .html y .scc. Ya que no se tomaron decisiones de diseño que se crean importantes)
+(De la 5 hasta la 14, solamente se comento el código .html, .scc u ambos. Ya que no se tomaron decisiones de diseño que se crean importantes)
 
 Por último de la act. 15 en adelante, se colocaran las decisiones que se tomaron, aparte de también haberse comentado el código de c/u:
 
