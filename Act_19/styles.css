@@ -1,0 +1,128 @@
+/* variables definidas */
+:root {
+  --color-primario: #2c3e50;
+  --color-secundario: #3498db;
+  --color-error: #e74c3c;
+  --color-exito: #27ae60;
+  --color-fondo: #f4f6f8;
+  --espaciado: 16px;
+}
+
+/* Base y estilos */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-primario);
+  margin: 0;
+  padding: var(--espaciado);
+}
+
+h1 {
+  text-align: center;
+}
+
+.formulario-registro {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: var(--espaciado);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Control de pasos (radios ocultos) */
+.control-paso {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Por defecto el paso 2 está oculto */
+.paso-dos {
+  display: none;
+}
+
+/* Cuando el radio del paso 2 está marcado, se invierte la visibilidad */
+#paso-2:checked ~ .paso-uno {
+  display: none;
+}
+
+#paso-2:checked ~ .paso-dos {
+  display: block;
+}
+
+/* Campos del formulario */
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--espaciado);
+}
+
+.campo label {
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.campo input,
+.campo textarea {
+  box-sizing: border-box;
+  padding: 8px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.campo textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--color-secundario);
+}
+
+/* Validación visual con :valid / :invalid */
+.campo input:required:invalid,
+.campo textarea:required:invalid {
+  border-color: var(--color-error);
+}
+
+.campo input:required:valid,
+.campo textarea:required:valid {
+  border-color: var(--color-exito);
+}
+
+/* Botones */
+.acciones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--color-secundario);
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+  background-color: var(--color-primario);
+}
+
+.boton-siguiente {
+  display: block;
+  width: 100%;
+}
+
+.boton-atras {
+  background-color: #95a5a6;
+}
