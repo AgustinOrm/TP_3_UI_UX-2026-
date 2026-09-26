@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
 
+
+<head>
+    <meta charset="UTF-8">
+    <title>Act_20</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar fija -->
+    <header class="navbar">
+        <div class="logo">MiSitio</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#testimonios">Testimonios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Sección Hero con imagen de fondo -->
+        <section id="hero" class="hero">
+            <div class="hero-contenido">
+                <h1>Bienvenido a MiSitio</h1>
+                <p>Soluciones simples para problemas complejos.</p>
+            </div>
+        </section>
+
+        <!-- Sección de servicios en grid -->
+        <section id="servicios" class="servicios">
+            <h2>Nuestros servicios</h2>
+            <div class="grid-servicios">
+                <div class="card-servicio">
+                    <h3>Diseño UX</h3>
+                    <p>Interfaces claras y fáciles de usar.</p>
+                </div>
+                <div class="card-servicio">
+                    <h3>Desarrollo Web</h3>
+                    <p>Sitios rápidos con HTML y CSS moderno.</p>
+                </div>
+                <div class="card-servicio">
+                    <h3>Consultoría</h3>
+                    <p>Asesoramos en cada etapa del proyecto.</p>
+                </div>
+                <div class="card-servicio">
+                    <h3>Soporte</h3>
+                    <p>Acompañamiento después de la entrega.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de testimonios en carrusel simple con scroll-snap -->
+        <section id="testimonios" class="testimonios">
+            <h2>Testimonios</h2>
+            <div class="carrusel">
+                <div class="testimonio">
+                    <p>"Excelente atención y resultados."</p>
+                    <span>— Ana G.</span>
+                </div>
+                <div class="testimonio">
+                    <p>"El sitio quedó muy prolijo y rápido."</p>
+                    <span>— Marcos L.</span>
+                </div>
+                <div class="testimonio">
+                    <p>"Superó nuestras expectativas."</p>
+                    <span>— Julia P.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section id="contacto" class="contacto">
+            <h2>Contacto</h2>
+            <form>
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&#169; 2026 MiSitio. Todos los derechos reservados.</p>
+    </footer>
+    
+</body>
+
+
+</html>

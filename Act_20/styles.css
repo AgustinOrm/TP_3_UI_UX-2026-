@@ -1,0 +1,250 @@
+/* variables definidas */
+:root {
+    --color-primario: #2c3e50;
+    --color-secundario: #2980b9;
+    --color-fondo: #f4f6f7;
+    --color-texto: #333;
+    --color-blanco: #fff;
+    --espaciado: 1.5em;
+    --radio-borde: 8px;
+    --transicion: 0.3s ease;
+}
+
+/* Base y estilos */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0 0 0.5em 0;
+    color: var(--color-primario);
+}
+
+section {
+    padding: var(--espaciado) 5%;
+}
+
+/* Navbar (Flexbox + position: fixed) */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8em 5%;
+    background-color: var(--color-primario);
+    z-index: 10;
+}
+
+.logo {
+    color: var(--color-blanco);
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: var(--espaciado);
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    transition: color var(--transicion);
+}
+
+.nav-links a:hover {
+    color: var(--color-secundario);
+}
+
+/* Hero (imagen de fondo + Flexbox para centrar contenido) */
+.hero {
+    margin-top: 60px;
+    /* deja lugar para la navbar fija */
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* La url se toma del servicio(público) de imagenes de prueba (mencionado en la act.18)*/
+    background: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)),
+        url("https://picsum.photos/1200/600") center/cover no-repeat;
+    color: var(--color-blanco);
+}
+
+.hero-contenido h1,
+.hero-contenido p {
+    color: var(--color-blanco);
+}
+
+.hero-contenido {
+    animation: apareceHero 1s ease-out;
+}
+
+/* Servicios (CSS Grid) */
+.grid-servicios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--espaciado);
+    margin-top: var(--espaciado);
+}
+
+.card-servicio {
+    background-color: var(--color-blanco);
+    border: 1px solid #ddd;
+    border-radius: var(--radio-borde);
+    padding: var(--espaciado);
+    box-sizing: border-box;
+    transition: transform var(--transicion);
+}
+
+.card-servicio:hover {
+    transform: translateY(-5px);
+}
+
+/* Testimonios (carrusel simple con scroll-snap) */
+.carrusel {
+    display: flex;
+    gap: var(--espaciado);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    margin-top: var(--espaciado);
+    padding-bottom: 0.5em;
+}
+
+.testimonio {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+    background-color: var(--color-blanco);
+    border-radius: var(--radio-borde);
+    padding: var(--espaciado);
+    text-align: center;
+}
+
+.testimonio span {
+    display: block;
+    margin-top: 0.5em;
+    font-weight: bold;
+    color: var(--color-secundario);
+}
+
+/* Formulario de contacto */
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin-top: var(--espaciado);
+    gap: 0.5em;
+}
+
+.contacto label {
+    font-weight: bold;
+}
+
+.contacto input,
+.contacto textarea {
+    padding: 0.6em;
+    border: 1px solid #ccc;
+    border-radius: var(--radio-borde);
+    font-family: inherit;
+    transition: border-color var(--transicion);
+}
+
+.contacto input:focus,
+.contacto textarea:focus {
+    border-color: var(--color-secundario);
+    outline: none;
+}
+
+.contacto button {
+    align-self: flex-start;
+    padding: 0.7em 1.5em;
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: var(--radio-borde);
+    cursor: pointer;
+    transition: background-color var(--transicion);
+}
+
+.contacto button:hover {
+    background-color: var(--color-primario);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+}
+
+/* Animación */
+@keyframes apareceHero {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media queries (con enfoque desktop-first) */
+
+/* Breakpoint 1: tablets (menores a 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    .hero {
+        margin-top: 90px;
+    }
+
+    .testimonio {
+        flex: 0 0 90%;
+    }
+}
+
+/* Breakpoint 2: celulares (menores a 480px) */
+@media (max-width: 480px) {
+    section {
+        padding: 1em 5%;
+    }
+
+    .nav-links {
+        gap: 0.8em;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .grid-servicios {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto button {
+        align-self: stretch;
+    }
+}
