@@ -1,0 +1,80 @@
+/* variables definidas */
+:root {
+    --color-primario: white;
+    --color-secundario: black;
+    --color-primario-letra: blue;
+    --color-secundario-letra: green;
+    --color-terciario-letra: orange;
+    --espaciado: 10px;
+    --radio: 30px;
+    --largo: 50px;
+    --ancho: 250px;
+}
+
+
+/* modificaciones al "sitio" */
+.sitio {
+    height: 500px;
+    width: 750px;
+    background-color: var(--color-primario);
+    transition: all 2s;
+}
+
+.sitio:hover {
+    background-color: var(--color-secundario);
+}
+
+
+/* modificaciones a la "fuente" de texto(0,1,2,3) */
+.fuente {
+    color: var(--color-primario-letra);
+}
+
+
+/* modificaciones al "texto0" */
+#texto0 {
+    margin: var(--espaciado);
+    padding: var(--espaciado);
+}
+
+#texto0:hover {
+    color: var(--color-terciario-letra);
+    background-color: var(--color-secundario-letra);
+}
+
+
+/* modificaciones al "texto1" */
+#texto1 {
+    height: var(--largo);
+    width: var(--ancho);
+    padding: var(--espaciado);
+}
+
+#texto1:hover {
+    background-color: var(--color-secundario-letra);
+}
+
+
+/* modificaciones al "texto2" */
+#texto2 {
+    height: var(--largo);
+    width: var(--ancho);
+    padding: var(--espaciado);
+}
+
+#texto2:hover {
+    background-color: var(--color-terciario-letra);
+}
+
+/* modificaciones al "texto3" */
+#texto3 {
+    margin: var(--espaciado);
+    padding: var(--espaciado);
+    border-radius: var(--radio);
+}
+
+#texto3:hover {
+    color: var(--color-secundario-letra);
+    background-color: var(--color-terciario-letra);
+}
+
